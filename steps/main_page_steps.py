@@ -18,8 +18,8 @@ class MainPageSteps(BaseSteps):
     def check_search_result(self):
         pass
 
-    def open_donate_steps(self ):
-        assert  self.main_page.donate_button.text == "Donate", "Donate button text is not Donate"
+    def open_donate_page(self):
+        assert self.main_page.donate_button.text == "Donate", "Donation button text is not Donate"
         self.main_page.donate_button.click()
 
     #Этот метод должен лежать в отдельном степе и отдельном пейдже
@@ -30,8 +30,6 @@ class MainPageSteps(BaseSteps):
         assert self.main_page.about_botton.text == "About", "About button text is not About"
         self.main_page.about_botton.click()
 
-    def check_about_page_is_open(self):
-        pass
 
     def open_downloads_page(self):
         assert self.main_page.downloads_button.text == "Downloads", "Downloads button text is not Downloads"
@@ -47,3 +45,20 @@ class MainPageSteps(BaseSteps):
     def check_community_page(self):
         pass
 
+    def open_success_stories_page(self):
+        assert self.main_page.success_stories_button.text == "Success Stories","Success Stories button text is not Success Stories"
+
+    def check_success_stories_page(self):
+        pass
+
+    def open_news_page(self):
+        assert self.main_page.news_button.text == "News","Success Stories button text is not Success Stories"
+
+    def check_news_page(self):
+        pass
+
+    def open_events_page(self):
+        assert self.main_page.events_button.text == "Events","Success Stories button text is not Success Stories"
+
+    def check_events_page(self):
+        pass

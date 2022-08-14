@@ -28,3 +28,15 @@ class MainPage(BasePage):
     @property
     def community_button(self):
         return self.driver.find_element(By.XPATH,"//li[@id='community']")
+
+    @property
+    def success_stories_button(self):
+        return self.driver.find_element(By.XPATH,"//li[@id='success-stories']")
+
+    @property
+    def news_button(self):
+        return self.driver.find_element(By.XPATH,"//li[@id='news']")
+
+    @property
+    def events_button(self):
+        return self.driver.find_element(By.XPATH,"//li[@id='events']")
