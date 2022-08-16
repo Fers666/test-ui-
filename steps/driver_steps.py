@@ -9,10 +9,9 @@ class DriverSteps:
 
     @property
     def driver_path(self):
-        root_dir = os.path.dirname(os.path.abspath("."))
-        path = f"{root_dir}/lib/chromedriver"
-        print(path)
-        return path
+        #root_dir = os.path.dirname(os.path.abspath("."))
+        #path = f"{root_dir}/lib/chromedriver"
+        return "C:\Programs\Test-UI\lib\chromedriver.exe"
 
     def create_driver_and_open_python_page(self) -> WebDriver:
         driver = webdriver.Chrome(executable_path=self.driver_path)
