@@ -1,6 +1,5 @@
 from pages.main_page import MainPage
 from steps.base_steps import BaseSteps
-"""from selenium.webdriver.common.action_chains import ActionChains"""
 
 class MainPageSteps(BaseSteps):
 
@@ -30,12 +29,7 @@ class MainPageSteps(BaseSteps):
         assert self.main_page.about_botton.text == "About", "About button text is not About"
         self.main_page.about_botton.click()
 
-"""#### move cursor
-    def open_about_menu(self,driver):
-        wd = driver.connection
-        element = self.main_page.about_botton()
-        ActionChains(wd).move_to_element(element)
-"""
+
 
     def open_downloads_page(self):
         assert self.main_page.downloads_button.text == "Downloads", "Downloads button text is not Downloads"

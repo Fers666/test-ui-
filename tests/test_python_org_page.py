@@ -1,4 +1,3 @@
-
 import steps
 
 
@@ -15,10 +14,6 @@ def test_about_button():
     driver = steps.DriverSteps().create_driver_and_open_python_page()
     steps.main_page(driver).open_about_page()
 
-"""def test_about_menu():
-    driver = steps.DriverSteps().create_driver_and_open_python_page()
-    steps.main_page(driver).open_about_menu()
-"""
 def test_downloads_button():
     driver = steps.DriverSteps().create_driver_and_open_python_page()
     steps.main_page(driver).open_downloads_page()
