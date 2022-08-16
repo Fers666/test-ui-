@@ -1,7 +1,6 @@
 from pages.main_page import MainPage
 from steps.base_steps import BaseSteps
 
-
 class MainPageSteps(BaseSteps):
 
     @property
@@ -29,6 +28,7 @@ class MainPageSteps(BaseSteps):
     def open_about_page(self):
         assert self.main_page.about_botton.text == "About", "About button text is not About"
         self.main_page.about_botton.click()
+
 
 
     def open_downloads_page(self):

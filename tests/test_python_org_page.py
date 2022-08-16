@@ -1,6 +1,3 @@
-from selenium.webdriver.chrome.webdriver import WebDriver
-from selenium import webdriver
-
 import steps
 
 
@@ -16,7 +13,7 @@ def test_donation_button():
 def test_about_button():
     driver = steps.DriverSteps().create_driver_and_open_python_page()
     steps.main_page(driver).open_about_page()
-    steps.about_page(driver).about_page()
+
 def test_downloads_button():
     driver = steps.DriverSteps().create_driver_and_open_python_page()
     steps.main_page(driver).open_downloads_page()
