@@ -1,37 +1,22 @@
-import steps
+# noinspection PyUnresolvedReferences
+from src.fixtures import steps
+
+import pytest
 
 
-def test_search_input():
-    driver = steps.DriverSteps().create_driver_and_open_python_page()
-    steps.main_page(driver).search(search_text="hello")
-    steps.main_page(driver).check_search_result()
 
-def test_donation_button():
-    driver = steps.DriverSteps().create_driver_and_open_python_page()
-    steps.main_page(driver).open_donate_page()
+@pytest.Mark.parametrize("search_text", "hello" , "buy" , "good")
+def test_search_input(steps,search_text):
+    steps.main_page.search(search_text= search_text)
+    steps.main_page.check_search_result()
 
-def test_about_button():
-    driver = steps.DriverSteps().create_driver_and_open_python_page()
-    steps.main_page(driver).open_about_page()
+def test_donation_button(steps):
+    steps.main_page.open_donate_page()
 
-def test_downloads_button():
-    driver = steps.DriverSteps().create_driver_and_open_python_page()
-    steps.main_page(driver).open_downloads_page()
+def test_about_button(steps):
+    steps.main_page.open_about_page()
 
-def test_community_button():
-    driver = steps.DriverSteps().create_driver_and_open_python_page()
-    steps.main_page(driver).open_community_page()
 
-def test_success_stories_button():
-    driver = steps.DriverSteps().create_driver_and_open_python_page()
-    steps.main_page(driver).open_success_stories_page()
-def test_news_button():
-    driver = steps.DriverSteps().create_driver_and_open_python_page()
-    steps.main_page(driver).open_news_page()
-
-def test_events_button():
-    driver = steps.DriverSteps().create_driver_and_open_python_page()
-    steps.main_page(driver).open_events_page()
 
 
 
